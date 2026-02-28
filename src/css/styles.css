@@ -1,0 +1,53 @@
+/**
+  |============================
+  | include css partials with
+  | default @import url()
+  |============================
+*/
+/* Common styles */
+@import url('./reset.css');
+@import url('./base.css');
+@import url('./container.css');
+@import url('./animations.css');
+
+/* Sections style */
+@import url('./exercises.css');
+@import url('./favorites.css');
+@import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+
+.hero {
+  /* 1. Накладання темного шару (overlay) та шлях до картинки */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                    url('../img/women-sportswear-working-out-outdoors 1.png');
+  
+  /* 2. Налаштування відображення картинки */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  /* 3. Відступи та колір тексту */
+  padding: 100px 0;
+  text-align: center;
+  color: #ffffff; /* Робимо текст білим, щоб він "світився" на темному фоні */
+}
+
+.hero button {
+  background-color: #4e75ff; /* Синій колір */
+  color: #ffffff;            /* Білий колір тексту */
+  padding: 12px 24px;        /* Відступи (вертикальні та горизонтальні) */
+  border: none;              /* Прибираємо стандартну рамку */
+  border-radius: 8px;        /* Заокруглюємо кути */
+  font-size: 16px;           /* Розмір шрифту */
+  font-weight: 500;          /* Товщина шрифту */
+  cursor: pointer;           /* Міняємо вигляд курсора */
+  transition: background-color 0.3s ease; /* Плавна зміна кольору */
+}
+
+/* Ефект при наведенні мишкою */
+.hero button:hover {
+  background-color: #3b5cd9; /* Трохи темніший колір */
+}

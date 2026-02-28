@@ -1,0 +1,15 @@
+.favorites {
+  /* Додаємо відступи, щоб секція не зливалася з іншими */
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.favorites-title {
+  /* Налаштування заголовка */
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1b1b1b; /* Темний колір тексту */
+  margin-bottom: 32px; /* Відступ від заголовка до майбутніх карток */
+}
