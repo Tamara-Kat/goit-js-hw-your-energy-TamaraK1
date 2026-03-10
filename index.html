@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-your-energy-TamaraK1/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Energy — Workout App</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <script type="module" crossorigin src="/goit-js-hw-your-energy-TamaraK1/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-your-energy-TamaraK1/assets/vendor-CzLJ9sAC.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-your-energy-TamaraK1/assets/index-BRHktAF6.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-your-energy-TamaraK1/assets/styles-Dh2PMzY3.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a class="nav-logo" href="./index.html" aria-label="Site logo">
+        <svg class="nav-logo-icon" width="100" height="30">
+          <use href="/goit-js-hw-your-energy-TamaraK1/assets/sprite-E8vg0sBb.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <main>
+      <section class="hero">
+  <div class="container">
+    <h1>Твоя Енергія — Твоє Майбутнє</h1>
+    <button type="button">Дізнатися більше</button>
+  </div>
+</section>
+<div class="quote-section">
+  <p id="quote-text">Завантаження цитати...</p> 
+  <p id="quote-author"></p>
+</div>
+
+      <section class="exercises-section">
+  <div class="container">
+    
+    <div class="exercises-header-top">
+      <h2 class="exercises-title">
+        <span id="exercises-back-btn" class="breadcrumb-main">Exercises</span>
+        <span id="exercises-breadcrumb-separator" class="is-hidden"> / </span>
+        <span id="category-label" class="breadcrumb-sub"></span>
+      </h2>
+
+      <ul class="filter-list">
+        <li>
+          <button type="button" class="filter-btn active" data-filter="Muscles">Muscles</button>
+        </li>
+        <li>
+          <button type="button" class="filter-btn" data-filter="Body parts">Body parts</button>
+        </li>
+        <li>
+          <button type="button" class="filter-btn" data-filter="Equipment">Equipment</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="exercises-header-bottom">
+      <form id="search-form" class="search-container is-hidden">
+        <input type="text" id="search-input" placeholder="Search">
+        <button type="submit" id="search-btn">
+          🔍
+        </button>
+      </form>
+    </div>
+
+    <ul id="exercises-container" class="exercises-list">
+      </ul>
+
+    <div id="pagination-container" class="pagination"></div>
+
+  </div>
+</section>
+
+      <section class="favorites" id="favorites">
+  <div class="container">
+    <h2 class="favorites-title">Favorites</h2>
+    </div>
+</section>
+
+      </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <div class="footer-subscription">
+      <h2 class="footer-title">
+        Subscribe to our newsletter for new exercises and tips
+      </h2>
+      
+      <form class="footer-form">
+        <input 
+          type="email" 
+          name="footer-email" 
+          placeholder="Email" 
+          required 
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-desc">
+        Made with ✨ by
+        <a
+          class="footer-link"
+          href="https://goit.global/ua/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GoIT team
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <div id="modal-container" class="is-hidden"></div>
+
+  </body>
+</html>
