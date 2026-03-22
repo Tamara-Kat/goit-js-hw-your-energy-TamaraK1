@@ -1,0 +1,55 @@
+/* Універсальний базовий клас для всіх кнопок */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Відступ між текстом та іконкою */
+  padding: 12px 24px; /* Взяті з макета пропорції */
+  border-radius: 30px; /* Сильне закруглення як у UI Kit */
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: all 250ms ease; /* Плавна анімація при наведенні */
+  border: none; /* За замовчуванням без рамки */
+}
+
+/* 1. Світла кнопка з тінню (на білому фоні) */
+.btn-white {
+  background-color: #fff;
+  color: #1b1b1b;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05); /* Легка тінь з макета */
+}
+
+.btn-white:hover {
+  background-color: #f4f4f4; /* Трохи темніша при наведенні */
+}
+
+/* 2. Темна кнопка (для модалки) */
+.btn-black {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.btn-black:hover {
+  background-color: #333; /* Світліша при наведенні */
+}
+
+/* 3. Кнопка з рамкою (на темному фоні) */
+.btn-outlined {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(244, 244, 244, 0.4); /* Напівпрозора біла рамка */
+}
+
+.btn-outlined:hover {
+  border-color: #fff; /* Яскрава біла рамка при наведенні */
+}
+
+/* Спеціальний стиль для іконок всередині кнопок */
+.btn svg {
+  fill: currentColor; /* Колір іконки залежить від кольору тексту */
+  width: 18px;
+  height: 18px;
+}

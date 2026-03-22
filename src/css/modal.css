@@ -1,0 +1,223 @@
+/* Оверлей (затемнення фону) */
+.modal-overlay {
+  position: fixed; /* Фіксує вікно по центру екрана */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.4); /* Напівпрозорий фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Щоб було поверх усього сайту */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 250ms ease;
+}
+
+/* Клас, який активує модалку */
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Контентне вікно */
+.modal-content {
+  background-color: #1b1b1b; /* Темний фон як на макеті */
+  color: #fff;
+  width: 716px;
+  min-height: 400px;
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  display: flex; /* Картинка зліва, текст справа */
+  gap: 40px;
+}
+
+/* Кнопка закриття (хрестик) */
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Зображення вправи */
+.modal-image {
+  width: 295px;
+  height: 295px;
+  border-radius: 20px;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+/* Права частина з текстом */
+.modal-details {
+  flex: 1;
+}
+
+.modal-details .exercise-name {
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+
+.exercise-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  border-top: 1px solid rgba(244, 244, 244, 0.2);
+  border-bottom: 1px solid rgba(244, 244, 244, 0.2);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.exercise-info p {
+  font-size: 12px;
+  color: rgba(244, 244, 244, 0.4);
+}
+
+.exercise-info span {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Кнопки внизу */
+.modal-btns {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.add-fav-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  background: #f4f4f4;
+  color: #1b1b1b;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.rating-btn {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 1px solid rgba(244, 244, 244, 0.4);
+  background: transparent;
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* --- СТИЛІ ДЛЯ ПОП-АПУ РЕЙТИНГУ --- */
+
+/* Оверлей (затемнення фону) */
+.rating-overlay {
+  position: fixed; /* Фіксує на екрані */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.6); /* Темніший фон для фокусу */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100; /* Вище, ніж основна модалка (там z-index 1000) */
+}
+
+/* Сама картка рейтингу */
+.rating-modal {
+  background-color: #1b1b1b; /* Темний фон як у макеті */
+  color: #fff;
+  width: 430px; /* Компактний розмір */
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  text-align: left; /* Вирівнювання тексту вліво */
+}
+
+/* Заголовок Rating */
+.rating-modal h3 {
+  font-size: 14px;
+  color: rgba(244, 244, 244, 0.4); /* Сірий заголовок */
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* Число рейтингу (0.0) */
+.rating-value {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+/* Зірочки */
+.stars-container {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.star {
+  font-size: 24px;
+  color: rgba(244, 244, 244, 0.2); /* Колір порожньої зірки */
+  transition: color 250ms ease;
+}
+
+.star.active {
+  color: #eea10c; /* Жовтий колір заповненої зірки */
+}
+
+/* Форма */
+#rating-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Поля вводу (Email та Comment) */
+#rating-form input,
+#rating-form textarea {
+  background: transparent;
+  border: 1px solid rgba(244, 244, 244, 0.2);
+  border-radius: 30px;
+  padding: 14px 18px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+#rating-form textarea {
+  border-radius: 15px; /* Менший радіус для textarea */
+  height: 120px;
+  resize: none; /* Заборонити зміну розміру */
+}
+
+/* Кнопки */
+.submit-rating {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background-color: #f4f4f4; /* Біла кнопка */
+  color: #1b1b1b;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.close-rating {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,31 +1,72 @@
+/* 1. Підключаємо основний шрифт Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: 'Montserrat', sans-serif; /* Основний шрифт проєкту */
+  /* Кольори з UI Kit */
+  --black: #1b1b1b;
+  --white: #f4f4f4;
+  --gray-transparent: rgba(27, 27, 27, 0.4);
+  
+  /* Додаємо змінні для макета */
+  --container-width: 1160px; /* Стандартна ширина для контенту */
+  --border-radius-lg: 100px;  /* Те саме велике закруглення для хедера */
+  --border-radius-sm: 20px;   /* Для карток вправ */
+  
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  font-weight: 400;
+  color: var(--black);
+  background-color: var(--white);
 
-  color: #1b1b1b;            /* Темний колір тексту для всього сайту */
-  background-color: #f4f4f4; /* Світло-сірий фон, як у професійних макетах */
-
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
 }
 
+/* 2. Налаштування сторінки */
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  min-width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden; /* Щоб сонечка, що вилазять за край, не створювали прокрутку */
+}
+
+/* 3. Головний КОНТЕЙНЕР — це виправить твою картинку */
+/* Оберни свій контент у тег з цим класом, щоб він не розпливався */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px; /* Відступи по боках для мобілок */
+  position: relative; /* Щоб сонечка всередині можна було позиціонувати */
+}
+
+/* 4. Базові скидання для картинок */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Щоб картинки не сплющувалися */
+}
+
+/* 5. Утиліти для позиціонування (для твоїх сонечок) */
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+/* Скидання списків (для Exercises) */
+ul, ol {
+  list-style: none;
+  padding: 0;
   margin: 0;
 }
 
-main {
-  flex-grow: 1;
-}
-main:has(.back-link) {
-  text-align: center;
+/* Скидання посилань */
+a {
+  text-decoration: none;
+  color: inherit;
 }

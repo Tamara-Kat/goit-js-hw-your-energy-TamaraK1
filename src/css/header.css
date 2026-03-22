@@ -1,44 +1,80 @@
 .header {
-  padding: 20px 0;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(27, 27, 27, 0.1); /* Тонка лінія знизу */
 }
-.nav {
+
+.header-container {
   display: flex;
-  justify-content: space-between;
-}
-.nav-logo {
-  display: inline-flex;
+  justify-content: space-between; /* Розносить Лого - Меню - Соцмережі */
   align-items: center;
-  justify-content: center;
 }
+
+/* ЛОГОТИП */
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #1b1b1b;
+}
+
+/* НАВІГАЦІЯ (Овальне перемикання) */
+.header-nav {
+  background-color: #f4f4f4; /* Світлий фон */
+  border-radius: 30px; /* Закруглені кути */
+  padding: 4px; /* Відступ всередині */
+}
+
 .nav-list {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 .nav-link {
-  position: relative;
   display: block;
+  padding: 10px 24px;
   font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1b1b1b;
+  border-radius: 30px;
+  transition: all 250ms ease;
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+/* Активний пункт меню (Темний овал) */
+.nav-link.active {
+  background-color: #1b1b1b;
+  color: #fff;
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+
+/* СОЦМЕРЕЖІ */
+.header-social-list {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(27, 27, 27, 0.1); /* Рамка */
+  border-radius: 10px; /* Закруглені рамки, як на макеті */
+  color: #1b1b1b;
+  transition: all 250ms ease;
+}
+
+.social-link:hover {
+  border-color: #1b1b1b;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.social-link svg {
+  fill: currentColor; /* Колір іконки залежить від кольору тексту посилання */
 }

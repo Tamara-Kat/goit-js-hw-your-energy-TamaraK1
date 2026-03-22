@@ -1,19 +1,82 @@
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+    <div class="header__wrapper">
+      
+      <div class="header__logo">
+        <a href="./index.html" class="header__logo-link" aria-label="Your Energy Home">
+          YOUR ENERGY
+        </a>
+      </div>
+
+      <nav class="header__nav">
+        <a href="./index.html" class="header__nav-link" data-page="home">Home</a>
+        <a href="./favorites.html" class="header__nav-link" data-page="favorites">Favorites</a>
+      </nav>
+
+      <ul class="header__socials">
+        <li>
+          <a href="https://www.facebook.com/goITclub/" class="header__socials-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg class="header__socials-icon" width="28" height="28">
+              <use href="./img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li>
+          <a href="https://www.instagram.com/goitclub/" class="header__socials-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="header__socials-icon" width="28" height="28">
+              <use href="./img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/c/GoIT" class="header__socials-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg class="header__socials-icon" width="28" height="28">
+              <use href="./img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
         </li>
       </ul>
-    </nav>
+
+      <button class="header__burger" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
   </div>
 </header>
+
+<div class="mobile-menu">
+  <div class="mobile-menu__content">
+    <button class="mobile-menu__close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 7L7 21M7 7L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    
+    <nav class="mobile-menu__nav">
+      <a href="./index.html" class="mobile-menu__nav-link" data-page="home">Home</a>
+      <a href="./favorites.html" class="mobile-menu__nav-link" data-page="favorites">Favorites</a>
+    </nav>
+
+    <ul class="mobile-menu__socials">
+      <li>
+        <a href="https://www.facebook.com/goITclub/" class="mobile-menu__socials-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg width="28" height="28">
+            <use href="./img/sprite.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/goitclub/" class="mobile-menu__socials-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="28" height="28">
+            <use href="./img/sprite.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="overlay"></div>

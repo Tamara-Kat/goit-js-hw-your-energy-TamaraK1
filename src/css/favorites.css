@@ -13,3 +13,15 @@
   color: #1b1b1b; /* Темний колір тексту */
   margin-bottom: 32px; /* Відступ від заголовка до майбутніх карток */
 }
+
+.favorites-empty {
+  max-width: 485px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.favorites-text {
+  font-size: 18px;
+  line-height: 1.33;
+  color: rgba(27, 27, 27, 0.6);
+}

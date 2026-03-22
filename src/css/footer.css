@@ -1,21 +1,121 @@
+/* Загальні налаштування футера */
 .footer {
-  padding: 20px 0;
+  background-color: #1b1b1b;
+  color: #f4f4f4;
+  padding: 80px 0 32px;
+  font-family: 'DM Sans', sans-serif; /* ОСНОВНИЙ ШРИФТ МАКЕТУ */
 }
-.footer-desc {
-  text-align: center;
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
 }
-.footer-link {
-  position: relative;
+
+/* Лого та соцмережі */
+.logo-white {
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #f4f4f4;
+  display: block;
+  margin-bottom: 20px;
 }
-.footer-link::before {
-  content: '';
-  position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%) skewX(-12deg);
-  z-index: -1;
-  width: 110%;
-  height: 24%;
-  background-color: #41d1ff;
-  transition: 200ms ease;
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(244, 244, 244, 0.2);
+  border-radius: 10px;
+  transition: background-color 250ms ease;
+}
+
+.footer-social-link:hover {
+  background-color: #f4f4f4;
+}
+
+.footer-social-link:hover .footer-social-icon {
+  fill: #1b1b1b;
+}
+
+/* Великий текст по центру */
+.footer-text {
+  font-size: 44px;
+  line-height: 1.1;
+  max-width: 480px;
+  margin: 0;
+}
+
+.footer-text-italic {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* === СТИЛЬ КНОПОК ТА ПОЛІВ (ЯК НА МАКЕТІ) === */
+.footer-form-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.footer-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Кнопка під інпутом */
+}
+
+.footer-input {
+  background: transparent;
+  border: 1px solid rgba(244, 244, 244, 0.3);
+  border-radius: 30px; /* Округлі як пігулка */
+  padding: 14px 18px;
+  color: #f4f4f4;
+  width: 100%;
+  outline: none;
+}
+
+.footer-btn {
+  background-color: #f4f4f4;
+  color: #1b1b1b;
+  border: none;
+  border-radius: 30px; /* Кнопка як пігулка */
+  padding: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 250ms ease;
+}
+
+.footer-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* Копірайт у самому низу */
+.footer-bottom {
+  border-top: 1px solid rgba(244, 244, 244, 0.2);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(244, 244, 244, 0.5);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 8px;
+}
+
+.footer-bottom-link {
+  color: inherit;
+  text-decoration: none;
 }

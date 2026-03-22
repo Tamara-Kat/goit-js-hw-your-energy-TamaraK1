@@ -1,9 +1,8 @@
 /* Styles for Mobile devices */
 .container {
-  min-width: 320px;
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0 16px;
+  max-width: 1440px; /* Ширина як у Desktop макета */
+  margin: 0 auto;    /* Центрування всього сайту */
+  padding: 0 20px;   /* Відступи, щоб текст не лип до країв екрана */
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
